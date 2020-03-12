@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
       post '/signin', to: 'sessions#create'
       delete '/logout', to: 'sessions#logout'
+
+      post '/card_sets', to: 'card_sets#create'
     end
   end
 end
