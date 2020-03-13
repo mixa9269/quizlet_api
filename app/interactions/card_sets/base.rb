@@ -6,7 +6,6 @@ module CardSets
     object :current_user, class: 'User'
 
     validate :entity_presence
-    validate :check_ability_to_make_action_with_entity
 
     private
 

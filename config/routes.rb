@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       post '/card_sets', to: 'card_sets#create'
       delete '/card_sets/:id', to: 'card_sets#destroy'
       patch '/card_sets/:id', to: 'card_sets#update'
+      get '/card_sets/:id', to: 'card_sets#show'
     end
   end
 end
