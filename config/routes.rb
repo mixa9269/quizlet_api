@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       delete '/card_sets/:id', to: 'card_sets#destroy'
       patch '/card_sets/:id', to: 'card_sets#update'
       get '/card_sets/:id', to: 'card_sets#show'
+      get '/card_sets', to: 'card_sets#index'
     end
   end
 end
