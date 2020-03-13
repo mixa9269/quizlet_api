@@ -16,6 +16,12 @@ module Api
           render json: result, status: :ok
         end
       end
+
+      def update
+        process_outcome(CardSets::Update.run(params)) do |result|
+          render json: result, status: :ok
+        end
+      end
     end
   end
 end

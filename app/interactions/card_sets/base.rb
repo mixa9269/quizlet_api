@@ -15,11 +15,11 @@ module CardSets
     end
 
     def entity_presence
-      entity || raise(::Exceptions::ResourceNotFound)
+      entity || raise(Exceptions::ResourceNotFound)
     end
 
     def check_ability_to_make_action_with_entity
-      entity.user_id == current_user.id || raise(::Errors::NotAllowed)
+      entity.user_id == current_user.id || raise(::Exceptions::NotAllowed)
     end
   end
 end

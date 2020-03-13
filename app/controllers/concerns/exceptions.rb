@@ -3,4 +3,5 @@
 module Exceptions
   class Unauthenticated < StandardError; end
   class ResourceNotFound < StandardError; end
+  class NotAllowed < StandardError; end
 end
