@@ -10,6 +10,12 @@ module Api
         render_single_outcome(outcome, CardSetSerializer)
       end
 
+      def destroy
+        process_outcome(CardSets::Destroy.run(params)) do |result|
+          render json: result, status: :ok
+        end
+      end
+
       private
 
       def card_set_params

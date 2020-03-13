@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       delete '/logout', to: 'sessions#logout'
 
       post '/card_sets', to: 'card_sets#create'
+      delete '/card_sets/:id', to: 'card_sets#destroy'
     end
   end
 end

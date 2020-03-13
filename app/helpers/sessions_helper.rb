@@ -16,5 +16,6 @@ module SessionsHelper
 
   def authenticate
     signed_in? || (raise ::Exceptions::Unauthenticated)
+    params[:current_user] = current_user
   end
 end
