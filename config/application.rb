@@ -37,8 +37,9 @@ module QuizletApi
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
-        resource '*', headers: :any, methods: [:get, :post, :options]
+        origins /http:\/\/localhost:[0-9]{4}/
+        resource '*', headers: :any, methods: [:get, :post, :patch, :delete, :options],
+        credentials: true
       end
     end
   end
